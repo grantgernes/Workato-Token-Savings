@@ -1,0 +1,15 @@
+{
+  "runId": "2026-07-14T14-26-38-381-scenario-8a-workato-standup",
+  "configName": "scenario-8a-workato-standup",
+  "configFile": "scripts/configs/scenario-8a-workato-standup.json",
+  "promptFile": null,
+  "userMessage": "Prep the daily standup for sprint PLAT-24 — in-progress Jira issues, recent Slack discussion, and any updated design docs in Google Drive.",
+  "allowedTools": {
+    "workato": [
+      "workato_sprint_standup_prep"
+    ]
+  },
+  "model": "claude-sonnet-4-6",
+  "startedAt": "2026-07-14T14:26:38.382Z",
+  "transcript": "2026-07-14T14-26-38-381-scenario-8a-workato-standup.jsonl"
+}

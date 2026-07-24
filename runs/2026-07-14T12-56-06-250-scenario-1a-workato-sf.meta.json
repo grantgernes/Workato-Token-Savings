@@ -1,0 +1,15 @@
+{
+  "runId": "2026-07-14T12-56-06-250-scenario-1a-workato-sf",
+  "configName": "scenario-1a-workato-sf",
+  "configFile": "scripts/configs/scenario-1a-workato-sf.json",
+  "promptFile": null,
+  "userMessage": "For Acme Corp, list the opportunities and open tasks.",
+  "allowedTools": {
+    "workato": [
+      "workato_sf_account_summary"
+    ]
+  },
+  "model": "claude-sonnet-4-6",
+  "startedAt": "2026-07-14T12:56:06.251Z",
+  "transcript": "2026-07-14T12-56-06-250-scenario-1a-workato-sf.jsonl"
+}

@@ -1,0 +1,23 @@
+{
+  "runId": "2026-07-14T14-25-31-937-scenario-7b-vendor-signals",
+  "configName": "scenario-7b-vendor-signals",
+  "configFile": "scripts/configs/scenario-7b-vendor-signals.json",
+  "promptFile": null,
+  "userMessage": "For Acme Corp, pull recent support tickets, product usage, and open opportunities to spot risk to the pipeline.",
+  "allowedTools": {
+    "zendesk": [
+      "get_tickets",
+      "get_organizations"
+    ],
+    "snowflake": [
+      "get_accounts_usage"
+    ],
+    "salesforce": [
+      "get_accounts",
+      "get_opportunities"
+    ]
+  },
+  "model": "claude-sonnet-4-6",
+  "startedAt": "2026-07-14T14:25:31.938Z",
+  "transcript": "2026-07-14T14-25-31-937-scenario-7b-vendor-signals.jsonl"
+}

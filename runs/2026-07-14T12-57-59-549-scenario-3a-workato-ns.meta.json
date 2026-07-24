@@ -1,0 +1,15 @@
+{
+  "runId": "2026-07-14T12-57-59-549-scenario-3a-workato-ns",
+  "configName": "scenario-3a-workato-ns",
+  "configFile": "scripts/configs/scenario-3a-workato-ns.json",
+  "promptFile": null,
+  "userMessage": "For Northwind Traders, prep close-of-books data — customer record, open sales orders, open invoices.",
+  "allowedTools": {
+    "workato": [
+      "workato_ns_close_books_prep"
+    ]
+  },
+  "model": "claude-sonnet-4-6",
+  "startedAt": "2026-07-14T12:57:59.550Z",
+  "transcript": "2026-07-14T12-57-59-549-scenario-3a-workato-ns.jsonl"
+}

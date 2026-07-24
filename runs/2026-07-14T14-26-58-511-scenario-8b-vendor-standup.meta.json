@@ -1,0 +1,21 @@
+{
+  "runId": "2026-07-14T14-26-58-511-scenario-8b-vendor-standup",
+  "configName": "scenario-8b-vendor-standup",
+  "configFile": "scripts/configs/scenario-8b-vendor-standup.json",
+  "promptFile": null,
+  "userMessage": "Prep the daily standup for sprint PLAT-24 — in-progress Jira issues, recent Slack discussion, and any updated design docs in Google Drive.",
+  "allowedTools": {
+    "jira": [
+      "get_issues"
+    ],
+    "slack": [
+      "search_messages"
+    ],
+    "googledrive": [
+      "list_recent_files"
+    ]
+  },
+  "model": "claude-sonnet-4-6",
+  "startedAt": "2026-07-14T14:26:58.513Z",
+  "transcript": "2026-07-14T14-26-58-511-scenario-8b-vendor-standup.jsonl"
+}

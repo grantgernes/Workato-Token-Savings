@@ -1,0 +1,15 @@
+{
+  "runId": "2026-07-14T14-21-50-096-scenario-4a-workato-support",
+  "configName": "scenario-4a-workato-support",
+  "configFile": "scripts/configs/scenario-4a-workato-support.json",
+  "promptFile": null,
+  "userMessage": "For ticket T-1042, get the escalation trail — ticket details, linked Jira bug, and any Slack discussion.",
+  "allowedTools": {
+    "workato": [
+      "workato_support_escalation_360"
+    ]
+  },
+  "model": "claude-sonnet-4-6",
+  "startedAt": "2026-07-14T14:21:50.097Z",
+  "transcript": "2026-07-14T14-21-50-096-scenario-4a-workato-support.jsonl"
+}

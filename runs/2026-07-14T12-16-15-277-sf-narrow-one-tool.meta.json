@@ -1,0 +1,15 @@
+{
+  "runId": "2026-07-14T12-16-15-277-sf-narrow-one-tool",
+  "configName": "sf-narrow-one-tool",
+  "configFile": "scripts/configs/sf-narrow-one-tool.json",
+  "promptFile": null,
+  "userMessage": "Look up the account named Acme Corp.",
+  "allowedTools": {
+    "salesforce": [
+      "get_accounts"
+    ]
+  },
+  "model": "claude-haiku-4-5",
+  "startedAt": "2026-07-14T12:16:15.278Z",
+  "transcript": "2026-07-14T12-16-15-277-sf-narrow-one-tool.jsonl"
+}

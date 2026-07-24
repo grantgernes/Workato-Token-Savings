@@ -1,0 +1,32 @@
+{
+  "runId": "2026-07-15T12-07-21-421-scenario-9b-vendor-health-full",
+  "configName": "scenario-9b-vendor-health-full",
+  "configFile": "scripts/configs/scenario-9b-vendor-health-full.json",
+  "promptFile": null,
+  "userMessage": "Give me the full customer health picture for Acme Corp — pipeline, product usage, churn risk, open support tickets, marketing contacts, and financial health.",
+  "allowedTools": {
+    "salesforce": [
+      "get_accounts",
+      "get_opportunities"
+    ],
+    "snowflake": [
+      "get_accounts_usage",
+      "get_churn_risk_scores"
+    ],
+    "zendesk": [
+      "get_organizations",
+      "get_tickets"
+    ],
+    "hubspot": [
+      "get_companies",
+      "get_contacts"
+    ],
+    "netsuite": [
+      "get_customers",
+      "get_invoices"
+    ]
+  },
+  "model": "claude-sonnet-4-6",
+  "startedAt": "2026-07-15T12:07:21.423Z",
+  "transcript": "2026-07-15T12-07-21-421-scenario-9b-vendor-health-full.jsonl"
+}

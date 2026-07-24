@@ -1,0 +1,15 @@
+{
+  "runId": "2026-07-14T14-25-05-629-scenario-7a-workato-signals",
+  "configName": "scenario-7a-workato-signals",
+  "configFile": "scripts/configs/scenario-7a-workato-signals.json",
+  "promptFile": null,
+  "userMessage": "For Acme Corp, pull recent support tickets, product usage, and open opportunities to spot risk to the pipeline.",
+  "allowedTools": {
+    "workato": [
+      "workato_account_support_signals"
+    ]
+  },
+  "model": "claude-sonnet-4-6",
+  "startedAt": "2026-07-14T14:25:05.630Z",
+  "transcript": "2026-07-14T14-25-05-629-scenario-7a-workato-signals.jsonl"
+}

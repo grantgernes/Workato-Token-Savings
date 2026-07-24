@@ -1,0 +1,15 @@
+{
+  "runId": "2026-07-15T12-06-54-409-scenario-9a-workato-health-full",
+  "configName": "scenario-9a-workato-health-full",
+  "configFile": "scripts/configs/scenario-9a-workato-health-full.json",
+  "promptFile": null,
+  "userMessage": "Give me the full customer health picture for Acme Corp — pipeline, product usage, churn risk, open support tickets, marketing contacts, and financial health.",
+  "allowedTools": {
+    "workato": [
+      "workato_customer_health_full"
+    ]
+  },
+  "model": "claude-sonnet-4-6",
+  "startedAt": "2026-07-15T12:06:54.410Z",
+  "transcript": "2026-07-15T12-06-54-409-scenario-9a-workato-health-full.jsonl"
+}

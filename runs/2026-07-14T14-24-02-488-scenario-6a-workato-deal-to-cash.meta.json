@@ -1,0 +1,15 @@
+{
+  "runId": "2026-07-14T14-24-02-488-scenario-6a-workato-deal-to-cash",
+  "configName": "scenario-6a-workato-deal-to-cash",
+  "configFile": "scripts/configs/scenario-6a-workato-deal-to-cash.json",
+  "promptFile": null,
+  "userMessage": "For the Northwind Traders - Q3 Restock deal, get the HubSpot deal record, NetSuite invoice, and any contract files in Google Drive.",
+  "allowedTools": {
+    "workato": [
+      "workato_deal_to_cash"
+    ]
+  },
+  "model": "claude-sonnet-4-6",
+  "startedAt": "2026-07-14T14:24:02.489Z",
+  "transcript": "2026-07-14T14-24-02-488-scenario-6a-workato-deal-to-cash.jsonl"
+}

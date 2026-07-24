@@ -1,0 +1,22 @@
+{
+  "runId": "2026-07-14T14-23-09-735-scenario-5b-vendor-handoff",
+  "configName": "scenario-5b-vendor-handoff",
+  "configFile": "scripts/configs/scenario-5b-vendor-handoff.json",
+  "promptFile": null,
+  "userMessage": "For contact Alice Cooper, verify the marketing-to-sales handoff — HubSpot contact, matching Salesforce account/opportunity, and Slack notification.",
+  "allowedTools": {
+    "hubspot": [
+      "get_contacts"
+    ],
+    "salesforce": [
+      "get_accounts",
+      "get_opportunities"
+    ],
+    "slack": [
+      "search_messages"
+    ]
+  },
+  "model": "claude-sonnet-4-6",
+  "startedAt": "2026-07-14T14:23:09.736Z",
+  "transcript": "2026-07-14T14-23-09-735-scenario-5b-vendor-handoff.jsonl"
+}

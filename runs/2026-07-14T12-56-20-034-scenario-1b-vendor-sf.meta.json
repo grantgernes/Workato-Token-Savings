@@ -1,0 +1,17 @@
+{
+  "runId": "2026-07-14T12-56-20-034-scenario-1b-vendor-sf",
+  "configName": "scenario-1b-vendor-sf",
+  "configFile": "scripts/configs/scenario-1b-vendor-sf.json",
+  "promptFile": null,
+  "userMessage": "For Acme Corp, list the opportunities and open tasks.",
+  "allowedTools": {
+    "salesforce": [
+      "get_accounts",
+      "get_opportunities",
+      "get_tasks"
+    ]
+  },
+  "model": "claude-sonnet-4-6",
+  "startedAt": "2026-07-14T12:56:20.035Z",
+  "transcript": "2026-07-14T12-56-20-034-scenario-1b-vendor-sf.jsonl"
+}

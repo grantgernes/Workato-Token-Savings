@@ -1,0 +1,20 @@
+{
+  "runId": "2026-07-14T12-57-14-603-scenario-2b-vendor-cross",
+  "configName": "scenario-2b-vendor-cross",
+  "configFile": "scripts/configs/scenario-2b-vendor-cross.json",
+  "promptFile": null,
+  "userMessage": "Give me the account health 360 for Acme Corp.",
+  "allowedTools": {
+    "salesforce": [
+      "get_accounts",
+      "get_opportunities"
+    ],
+    "snowflake": [
+      "get_accounts_usage",
+      "get_churn_risk_scores"
+    ]
+  },
+  "model": "claude-sonnet-4-6",
+  "startedAt": "2026-07-14T12:57:14.604Z",
+  "transcript": "2026-07-14T12-57-14-603-scenario-2b-vendor-cross.jsonl"
+}

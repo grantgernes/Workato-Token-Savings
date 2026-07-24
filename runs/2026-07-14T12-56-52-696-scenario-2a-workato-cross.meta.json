@@ -1,0 +1,15 @@
+{
+  "runId": "2026-07-14T12-56-52-696-scenario-2a-workato-cross",
+  "configName": "scenario-2a-workato-cross",
+  "configFile": "scripts/configs/scenario-2a-workato-cross.json",
+  "promptFile": null,
+  "userMessage": "Give me the account health 360 for Acme Corp.",
+  "allowedTools": {
+    "workato": [
+      "workato_account_health_360"
+    ]
+  },
+  "model": "claude-sonnet-4-6",
+  "startedAt": "2026-07-14T12:56:52.697Z",
+  "transcript": "2026-07-14T12-56-52-696-scenario-2a-workato-cross.jsonl"
+}

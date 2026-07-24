@@ -1,0 +1,15 @@
+{
+  "runId": "2026-07-14T14-22-54-194-scenario-5a-workato-handoff",
+  "configName": "scenario-5a-workato-handoff",
+  "configFile": "scripts/configs/scenario-5a-workato-handoff.json",
+  "promptFile": null,
+  "userMessage": "For contact Alice Cooper, verify the marketing-to-sales handoff — HubSpot contact, matching Salesforce account/opportunity, and Slack notification.",
+  "allowedTools": {
+    "workato": [
+      "workato_lead_handoff_status"
+    ]
+  },
+  "model": "claude-sonnet-4-6",
+  "startedAt": "2026-07-14T14:22:54.195Z",
+  "transcript": "2026-07-14T14-22-54-194-scenario-5a-workato-handoff.jsonl"
+}

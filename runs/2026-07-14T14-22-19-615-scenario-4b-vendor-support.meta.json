@@ -1,0 +1,21 @@
+{
+  "runId": "2026-07-14T14-22-19-615-scenario-4b-vendor-support",
+  "configName": "scenario-4b-vendor-support",
+  "configFile": "scripts/configs/scenario-4b-vendor-support.json",
+  "promptFile": null,
+  "userMessage": "For ticket T-1042, get the escalation trail — ticket details, linked Jira bug, and any Slack discussion.",
+  "allowedTools": {
+    "zendesk": [
+      "get_ticket_by_id"
+    ],
+    "jira": [
+      "get_issue_by_key"
+    ],
+    "slack": [
+      "search_messages"
+    ]
+  },
+  "model": "claude-sonnet-4-6",
+  "startedAt": "2026-07-14T14:22:19.616Z",
+  "transcript": "2026-07-14T14-22-19-615-scenario-4b-vendor-support.jsonl"
+}
