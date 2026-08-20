@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { listScenarios } from "@/lib/scenarios";
+import { EnterpriseCalc } from "./enterprise-calc";
 
 export const dynamic = "force-dynamic";
 
@@ -17,7 +18,8 @@ export default async function Home({
   searchParams: Promise<{ tab?: string }>;
 }) {
   const { tab } = await searchParams;
-  const activeTab = tab === "scenarios" ? "scenarios" : "overview";
+  const activeTab =
+    tab === "scenarios" ? "scenarios" : tab === "enterprise" ? "enterprise" : "overview";
   const scenarios = listScenarios();
 
   const withBoth = scenarios.filter(
@@ -62,6 +64,10 @@ export default async function Home({
   const monthlyWorkatoCost = (totalWorkatoCost / n) * SCALE;
   const monthlySavings = monthlyVendorCost - monthlyWorkatoCost;
 
+  const savingsPcts = withBoth.map((s) => s.tokenSavingsPct!);
+  const minSavingsPct = savingsPcts.length > 0 ? Math.min(...savingsPcts) : 40;
+  const maxSavingsPct = savingsPcts.length > 0 ? Math.max(...savingsPcts) : 85;
+
   const hasData = withBoth.length > 0;
 
   return (
@@ -78,10 +84,13 @@ export default async function Home({
           <TabLink href="/?tab=scenarios" active={activeTab === "scenarios"}>
             9 Benchmark Scenarios
           </TabLink>
+          <TabLink href="/?tab=enterprise" active={activeTab === "enterprise"}>
+            ROI Calculator
+          </TabLink>
         </div>
       </nav>
 
-      {activeTab === "overview" ? (
+      {activeTab === "overview" && (
         <OverviewTab
           scenarios={withBoth}
           hasData={hasData}
@@ -93,8 +102,15 @@ export default async function Home({
           monthlySavings={monthlySavings}
           scenarioCount={withBoth.length}
         />
-      ) : (
-        <ScenariosTab scenarios={scenarios} />
+      )}
+      {activeTab === "scenarios" && <ScenariosTab scenarios={scenarios} />}
+      {activeTab === "enterprise" && (
+        <EnterpriseTab
+          minPct={minSavingsPct}
+          avgPct={avgSavingsPct}
+          maxPct={maxSavingsPct}
+          hasRealData={hasData}
+        />
       )}
     </div>
   );
@@ -459,6 +475,43 @@ function OverviewTab({
   );
 }
 
+// ─── Enterprise tab ───────────────────────────────────────────────────────────
+
+function EnterpriseTab({
+  minPct,
+  avgPct,
+  maxPct,
+  hasRealData,
+}: {
+  minPct: number;
+  avgPct: number;
+  maxPct: number;
+  hasRealData: boolean;
+}) {
+  return (
+    <main className="mx-auto max-w-6xl px-6 py-12">
+      <header className="mb-10">
+        <div className="text-[10px] uppercase tracking-widest text-ink-600 mb-2">ROI Estimator</div>
+        <h1 className="text-2xl font-semibold text-ink-100">
+          What does this mean for your organization?
+        </h1>
+        <p className="text-sm text-ink-400 mt-2 max-w-2xl leading-relaxed">
+          Adjust the inputs to reflect your organization. Token savings range is anchored to{" "}
+          {hasRealData
+            ? "measured results from the 9 benchmark scenarios."
+            : "estimated benchmarks — run the scenarios to replace with live data."}
+        </p>
+      </header>
+      <EnterpriseCalc
+        minPct={minPct}
+        avgPct={avgPct}
+        maxPct={maxPct}
+        hasRealData={hasRealData}
+      />
+    </main>
+  );
+}
+
 // ─── Scenarios tab ────────────────────────────────────────────────────────────
 
 function ScenariosTab({
@@ -658,22 +711,22 @@ function ScenarioCard({
         <div className="grid grid-cols-2 gap-3 pt-2 border-t border-ink-800">
           <Stat
             label="Tokens saved"
-            primary={fmt(Math.max(0, scenario.tokenDelta ?? 0))}
-            secondary={
+            primary={
               scenario.tokenSavingsPct !== null
                 ? `${fmtPct(scenario.tokenSavingsPct)} less`
-                : ""
+                : "—"
             }
+            secondary={`${fmt(Math.max(0, scenario.tokenDelta ?? 0))} tokens`}
             good={tokenGood}
           />
           <Stat
             label="Time saved"
-            primary={fmtDur(Math.max(0, scenario.durationDelta ?? 0))}
-            secondary={
+            primary={
               scenario.speedupPct !== null
                 ? `${fmtPct(scenario.speedupPct)} faster`
-                : ""
+                : "—"
             }
+            secondary={fmtDur(Math.max(0, scenario.durationDelta ?? 0))}
             good={timeGood}
           />
         </div>
@@ -703,11 +756,11 @@ function Stat({
     <div>
       <div className="text-[10px] uppercase tracking-wider text-ink-500">{label}</div>
       <div
-        className={`text-lg font-semibold tabular-nums ${good ? "text-emerald-300" : "text-ink-300"}`}
+        className={`text-2xl font-bold tabular-nums ${good ? "text-emerald-300" : "text-ink-300"}`}
       >
         {primary}
       </div>
-      <div className={`text-[11px] ${good ? "text-emerald-500" : "text-ink-500"}`}>
+      <div className={`text-xs mt-0.5 ${good ? "text-emerald-600" : "text-ink-500"}`}>
         {secondary}
       </div>
     </div>
